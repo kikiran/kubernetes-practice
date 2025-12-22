@@ -86,10 +86,10 @@ APIs
 Microservices
 
 
-| Feature         | Pod | ReplicaSet | Deployment |
-| --------------- | --- | ---------- | ---------- |
+| Feature         | Pod | ReplicaSet | Deployment   |
+| --------------- | --- | ---------- | ----------   |
 | Self-healing    | ❌   | ✅          | ✅          |
 | Scaling         | ❌   | ✅          | ✅          |
 | Rolling updates | ❌   | ❌          | ✅          |
-| Production use  | ❌   | ⚠️ Rare    | ✅          |
+| Production use  | ❌   | ⚠️ Rare     | ✅          |
 ```

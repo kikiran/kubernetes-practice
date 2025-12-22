@@ -1,7 +1,6 @@
 # kubernetes-Installation
 
-- [Day-01: Installation](day01-Installation)
-
+- [Day-01: Installation](day01-installation)
 
 # Kubernetes Workloads – Pod, ReplicaSet, Deployment
 
@@ -93,3 +92,4 @@ Microservices
 | Scaling         | ❌   | ✅          | ✅          |
 | Rolling updates | ❌   | ❌          | ✅          |
 | Production use  | ❌   | ⚠️ Rare    | ✅          |
+```

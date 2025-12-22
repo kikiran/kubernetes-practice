@@ -1,8 +1,8 @@
-# kubernetes-Installation
+# 1. kubernetes-Installation
 
 - [Day-01: Installation](day01-installation)
 
-# Kubernetes Workloads – Pod, ReplicaSet, Deployment
+# 2. Kubernetes Workloads – Pod, ReplicaSet, Deployment
 
 - [Day-02: Worker-node](day02-worker-node)
 

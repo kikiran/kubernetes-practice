@@ -99,30 +99,42 @@ Microservices
 - [Day-03: Services](day03-service)
 
 1️⃣ ClusterIP (Default)
+
 🔹 Description
+
 Exposes the Service inside the cluster only
 Not accessible from outside the cluster
 Best for internal communication
+
 🔹 Use cases
+
 Backend services
 Internal APIs
 Database connections
 
 2️⃣ NodePort
+
 🔹 Description
+
 Exposes the Service on each node’s IP
 Uses a port range 30000–32767
 Accessible externally via <NodeIP>:<NodePort>
+
 🔹 Use cases
+
 Learning & testing
 Simple external access
 
 3️⃣ LoadBalancer
+
 🔹 Description
+
 Exposes Service using a cloud provider load balancer
 Automatically assigns an external IP
 Built on top of NodePort
+
 🔹 Use cases
+
 Production applications
 Public-facing services
 Cloud environments (EKS, AKS, GKE)
@@ -136,6 +148,7 @@ Cloud environments (EKS, AKS, GKE)
 | Simplicity      | ⭐⭐⭐    | ⭐⭐     | ⭐⭐⭐⭐     |
 
 ✅ When to use what?
+
 ClusterIP → Internal communication
 NodePort → Learning & debugging
 LoadBalancer → Production workloads

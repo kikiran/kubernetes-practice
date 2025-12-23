@@ -150,5 +150,7 @@ Cloud environments (EKS, AKS, GKE)
 ✅ When to use what?
 
 ClusterIP → Internal communication
+
 NodePort → Learning & debugging
+
 LoadBalancer → Production workloads

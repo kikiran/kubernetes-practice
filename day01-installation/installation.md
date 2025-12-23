@@ -27,6 +27,11 @@ You can follow same procedure in the official  AWS document [Getting started wit
    eksctl version
    ```
   
+***Update the kubenetes if not working *****
+
+aws eks update-kubeconfig --region us-east-1 --name mycluster
+
+
 3. Create an IAM Role and attache it to EC2 instance    
    `Note: create IAM user with programmatic access if your bootstrap system is outside of AWS`   
    IAM user should have access to   

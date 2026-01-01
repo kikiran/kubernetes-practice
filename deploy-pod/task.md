@@ -9,18 +9,12 @@ As part of this task, a Kubernetes Pod needs to be created using the Apache HTTP
 
  * Create a Pod named: pod-httpd
 
-Use the image: httpd:latest
+ * Use the image: httpd:latest
 
-Set the label:
+ * Set the label: app: httpd_app
 
-app: httpd_app
+ * Name the container: httpd-container
 
-Name the container:
-
-httpd-container
-
-Expose container port:
-
-80
+ * Expose container port: 80
 
 #### Note: The kubectl utility on jump_host is configured to operate with the Kubernetes cluster.

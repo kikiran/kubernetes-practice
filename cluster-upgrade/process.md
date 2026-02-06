@@ -33,6 +33,7 @@ aws eks describe-cluster \
 
   ![alt text](image-1.png)
 
+![alt text](image-3.png)
 ## 3. Update EKS Add-ons (AWS Console)
 
 After the control plane upgrade to Kubernetes 1.35 is completed, update all EKS managed add-ons to ensure compatibility.
@@ -153,3 +154,6 @@ kubectl get nodes
 kubectl get pods -A
 kubectl get events -A
 ```
+
+![alt text](image-2.png)
+

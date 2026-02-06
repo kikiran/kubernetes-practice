@@ -134,6 +134,7 @@ After all node groups are upgraded to Kubernetes 1.35, verify that nodes and kub
 kubectl get nodes
 ```
 
+![alt text](image-4.png)
 
 ## 7. Validate Cluster Autoscaler
 

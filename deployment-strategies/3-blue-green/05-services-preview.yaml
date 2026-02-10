@@ -1,0 +1,41 @@
+---
+# Preview service for Blue
+apiVersion: v1
+kind: Service
+metadata:
+  name: bluegreen-preview-blue
+  namespace: deployment-demo
+  labels:
+    app: bluegreen-demo
+    role: preview
+spec:
+  type: LoadBalancer
+  selector:
+    app: bluegreen-demo
+    version: blue
+  ports:
+  - name: http
+    port: 80
+    targetPort: 3000
+    protocol: TCP
+
+---
+# Preview service for Green
+apiVersion: v1
+kind: Service
+metadata:
+  name: bluegreen-preview-green
+  namespace: deployment-demo
+  labels:
+    app: bluegreen-demo
+    role: preview
+spec:
+  type: LoadBalancer
+  selector:
+    app: bluegreen-demo
+    version: green
+  ports:
+  - name: http
+    port: 80
+    targetPort: 3000
+    protocol: TCP

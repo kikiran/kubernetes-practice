@@ -1,0 +1,16 @@
+{
+  "name": "deployment-strategies-demo",
+  "version": "1.0.0",
+  "description": "Demo app for Kubernetes deployment strategies on EKS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": ["kubernetes", "eks", "deployment", "canary", "blue-green"],
+  "author": "DevOps Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: canary-stable
+  namespace: deployment-demo
+  labels:
+    app: canary-demo
+    version: stable
+spec:
+  replicas: 9  # 90% of traffic
+  selector:
+    matchLabels:
+      app: canary-demo
+      version: stable
+  template:
+    metadata:
+      labels:
+        app: canary-demo
+        version: stable
+        track: stable
+    spec:
+      containers:
+      - name: app
+        image: YOUR_REGISTRY/deployment-demo:v1
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 3000
+        env:
+        - name: APP_VERSION
+          value: "v1"
+        - name: APP_COLOR
+          value: "blue"
+        - name: TRACK
+          value: "stable"
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5

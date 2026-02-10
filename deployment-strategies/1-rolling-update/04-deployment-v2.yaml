@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: YOUR_REGISTRY/deployment-demo:v2  # Updated version
+        image: kinnuskiran/deployment-demo:v2  # Updated version
         imagePullPolicy: Always
         ports:
         - name: http

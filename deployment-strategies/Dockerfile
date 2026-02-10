@@ -1,5 +1,5 @@
 # Multi-stage Dockerfile for deployment strategies demo
-FROM node:18-slim AS builder
+FROM node:18-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci 

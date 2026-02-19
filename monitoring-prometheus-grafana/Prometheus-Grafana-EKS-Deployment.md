@@ -77,11 +77,15 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 kubectl create namespace prometheus
 ```
 
+![alt text](image.png)
+
 ### Step 4: Install Kube-Prometheus-Stack
 
 ```bash
 helm install stable prometheus-community/kube-prometheus-stack -n prometheus
 ```
+
+![alt text](image-1.png)
 
 **Note**: This command installs the kube-prometheus-stack, which comes with a Grafana deployment embedded as the default option. You don't need to install Grafana separately.
 
@@ -92,6 +96,8 @@ Check if Prometheus pods are running:
 ```bash
 kubectl get pods -n prometheus
 ```
+
+![alt text](image-2.png)
 
 Check the services created:
 
@@ -119,6 +125,8 @@ Edit the Prometheus service to change from ClusterIP to LoadBalancer:
 kubectl edit svc stable-kube-prometheus-sta-prometheus -n prometheus
 ```
 
+![alt text](image-3.png)
+
 Change the `type` field from `ClusterIP` to `LoadBalancer` and save the file.
 
 After changing, you'll see a LoadBalancer endpoint that you can use to access Prometheus:
@@ -126,6 +134,7 @@ After changing, you'll see a LoadBalancer endpoint that you can use to access Pr
 ```
 http://<LOAD_BALANCER_DNS>/
 ```
+![alt text](image-4.png)
 
 ### Expose Grafana
 
@@ -147,6 +156,9 @@ Retrieve the automatically generated admin password:
 kubectl get secret --namespace prometheus stable-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
 
+![alt text](image-5.png)
+
+
 **Login Credentials:**
 - **Username**: `admin`
 - **Password**: [Use the command above to retrieve]
@@ -164,6 +176,9 @@ Navigate to the Grafana LoadBalancer URL in your browser and log in with admin c
 1. Click on **"+"** icon or **"Import"** option
 2. Search for dashboard templates (there are plenty of ready-made templates available)
 3. Choose a template that uses Prometheus as the data source
+
+
+![alt text](image-6.png)
 
 ### Step 3: View the Dashboard
 

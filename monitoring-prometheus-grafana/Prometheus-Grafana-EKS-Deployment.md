@@ -1,9 +1,5 @@
 # Deployment of Prometheus and Grafana using Helm in EKS Cluster
 
-**By Veerababu Narni**  
-**Published: Apr 3, 2024**  
-**Reading Time: 7 min**
-
 ---
 
 ## Overview
@@ -382,7 +378,3 @@ This setup provides comprehensive visibility into your EKS cluster's health and 
 - [Kubernetes Monitoring Best Practices](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/)
 
 ---
-
-**Author**: Veerababu Narni  
-**Date**: April 3, 2024  
-**Platform**: Medium

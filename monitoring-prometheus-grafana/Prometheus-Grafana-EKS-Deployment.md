@@ -13,6 +13,8 @@ This guide covers the deployment of Prometheus and Grafana monitoring stack usin
 
 ---
 
+![alt text](image-7.png)
+
 ## Prerequisites
 
 - **EC2 instance**: t2.micro or larger

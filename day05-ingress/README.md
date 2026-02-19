@@ -57,3 +57,37 @@ http://<external-ip>/httpd
 kubectl get pods -n dev
 kubectl get svc -n dev
 kubectl get ingress -n dev
+
+
+## Ingress Options
+
+### Option 1: Simple Host-Based Routing
+
+kubectl apply -f ingress-host.yaml
+
+Access:
+http://example.com/nginx
+http://example.com/httpd
+
+
+### Option 2: Regex + Rewrite Routing
+
+kubectl apply -f external-dns.yaml
+
+Access:
+http://example.com/nginx/test
+http://example.com/httpd/demo
+
+
+---
+
+## Important
+
+Make sure:
+
+1. Ingress controller is installed
+2. DNS points example.com to LoadBalancer IP
+
+OR add entry in /etc/hosts:
+
+<external-ip> example.com
